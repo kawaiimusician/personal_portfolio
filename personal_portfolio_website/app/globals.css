@@ -11,61 +11,72 @@ body {
 }
 
 nav {
-  display: flex;
-  font-size: 20pt;
-  border-bottom: 2px solid white;
-  justify-content: space-between;
-  padding: 10px;
+  @apply
+    text-2xl
+    flex
+    border-b-2 border-offWhite
+    justify-between
+    p-2.5;
 }
 
 nav p {
-  flex: auto;
-  font-size: 25pt;
+  @apply
+    flex-auto
+    text-4xl;
 }
 
 nav a {
-  flex: auto;
-  text-align: center;
-  padding: 5px;
-  border-radius: 25px;
-  transition: .3s;
+  @apply
+    flex-auto
+    text-center
+    p-1.5
+    rounded-3xl
+    transition duration-200;
 }
 nav a:hover {
-  background-color: #3b0123;
+  @apply 
+    bg-secondary;
 }
 
 .spacer {
-  flex: 20;
+  @apply
+    flex-20;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 900px) {
   nav {
-    display: flex;
-    flex-direction: column;
-    font-size: 15pt;
-    border-bottom: 2px solid white;
-    justify-content: space-between;
-    padding: 10px;
+    @apply
+      text-base
+      flex flex-col
+      border-b-2 border-offWhite
+      justify-between
+      p-2.5;
   }
-  
+
   nav p {
-    flex: auto;
-    font-size: 25pt;
-    text-align: center;
+    @apply
+      mb-3
+      flex-auto
+      text-xl
+      text-center;
+      font-size: 25pt;
   }
   
   nav a {
-    flex: auto;
-    text-align: center;
-    padding: 5px;
-    border-radius: 25px;
-    transition: .3s;
+    @apply
+      flex-auto
+      text-center
+      p-1.5
+      rounded-3xl
+      transition duration-200;
   }
   nav a:hover {
-    background-color: #3b0123;
+    @apply 
+      bg-secondary;
   }
   
   .spacer {
-    flex: 20;
+    @apply
+      flex-1;
   }
 }
