@@ -8,6 +8,7 @@ body {
     bg-primary
     text-offWhite 
     m-8;
+    height: 5000px;
 }
 
 nav {
@@ -43,10 +44,10 @@ nav a:hover {
     flex-20;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 650px) {
   nav {
     @apply
-      text-base
+      text-2xl
       flex flex-col
       border-b-2 border-offWhite
       justify-between
@@ -57,7 +58,7 @@ nav a:hover {
     @apply
       mb-3
       flex-auto
-      text-xl
+      text-4xl
       text-center;
   }
   
