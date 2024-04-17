@@ -13,7 +13,7 @@ module.exports = {
         offWhite: '#e0e0e0'
       },
       flex: {
-        '20': '20'
+        '10': '10'
       }
     },
   },

@@ -8,7 +8,6 @@ body {
     bg-primary
     text-offWhite 
     m-8;
-    height: 5000px;
 }
 
 nav {
@@ -30,7 +29,8 @@ nav a {
   @apply
     flex-auto
     text-center
-    p-1.5
+    px-2.5
+    py-2.5
     rounded-3xl
     transition duration-200;
 }
@@ -39,12 +39,7 @@ nav a:hover {
     bg-secondary;
 }
 
-.spacer {
-  @apply
-    flex-20;
-}
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 639px) {
   nav {
     @apply
       text-2xl
@@ -78,5 +73,11 @@ nav a:hover {
   .spacer {
     @apply
       flex-1;
+  }
+
+  .navButton {
+    @apply
+      flex-auto
+      text-center;
   }
 }
