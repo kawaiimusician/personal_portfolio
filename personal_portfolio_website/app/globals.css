@@ -5,13 +5,18 @@
 /* base styles */
 body {
   @apply 
-    bg-primary
-    text-offWhite 
-    m-8;
+    bg-offWhite
+    text-primary;
+}
+
+.main {
+  height: 1500px
 }
 
 nav {
   @apply
+  bg-primary
+  text-offWhite
     text-2xl
     flex
     border-b-2 border-offWhite
@@ -36,7 +41,21 @@ nav a {
 }
 nav a:hover {
   @apply 
-    bg-secondary;
+    text-primary
+    bg-tertiary;
+}
+
+.footer {
+  @apply
+    text-offWhite
+    bg-tertiary
+    h-[125px];
+}
+
+.footerLink {
+  @apply
+    text-center
+    p-1.5;
 }
 
 @media only screen and (max-width: 639px) {
