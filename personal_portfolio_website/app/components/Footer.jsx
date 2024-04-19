@@ -11,7 +11,7 @@ export default function Footer() {
           <Link target="_blank" href="https://www.linkedin.com/in/rebecca-heyman/" passHref={true} className="footerLink">
             <Image src="/linkedin.png" width={40} height={40} alt="linkedin" />
           </Link>
-          <Link href="mailto:rebecca@heyman.com" className="footerLink">
+          <Link href="mailto:RebeccaHeyman@proton.me" className="footerLink">
             <Image src="/mail.png" width={40} height={40} alt="contact" />
           </Link>
         </div>
