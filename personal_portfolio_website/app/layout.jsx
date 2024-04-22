@@ -1,13 +1,13 @@
 
 import "./globals.css";
 //import google font
-import { Rubik } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 // component import
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
-const rubik = Rubik({ subsets: ["latin"] });
+const open_sans = Open_Sans({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "Rebecca Heyman",
@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
+      <body className={open_sans.className}>
         <Navbar></Navbar>
         {children}
         <Footer></Footer>

@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
   return (
-    <div className="bg-primary p-8 sticky top-0">
+    <div className="bg-primary p-8 sticky top-0 z-10">
       <nav>
         <p>Rebecca Heyman</p>
         <div className="sm:hidden navButton">

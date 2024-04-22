@@ -13,6 +13,12 @@ body {
   height: 1500px
 }
 
+.hideSmScreen {
+  @apply 
+    hidden 
+    sm:block;
+}
+
 nav {
   @apply
   bg-primary
@@ -58,6 +64,37 @@ nav a:hover {
     p-1.5;
 }
 
+.mainPageHeader {
+  @apply 
+    w-fit 
+    flex flex-col 
+    sm:flex-row 
+    mx-auto;
+}
+
+.mainPageHeader p {
+  @apply
+    text-5xl
+    text-center
+    font-bold;
+}
+
+.imageCrop {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+} 
+.circleImage {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+
+/* --------- Small Screen / Mobile ------------ */
 @media only screen and (max-width: 639px) {
   nav {
     @apply
