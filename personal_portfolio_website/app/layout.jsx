@@ -7,7 +7,10 @@ import { Open_Sans } from "next/font/google";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
-const open_sans = Open_Sans({ weight: "400", subsets: ["latin"] });
+const open_sans = Open_Sans({ 
+  subsets: ["latin"],
+  display: 'swap'
+});
 
 export const metadata = {
   title: "Rebecca Heyman",

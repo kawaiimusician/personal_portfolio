@@ -6,17 +6,20 @@
 body {
   @apply 
     bg-offWhite
-    text-primary;
-}
-
-.main {
-  height: 1500px
+    text-primary
+    text-lg;
 }
 
 .hideSmScreen {
   @apply 
     hidden 
     sm:block;
+}
+
+.hideLgScreen {
+  @apply 
+    hidden 
+    lg:block;
 }
 
 nav {
@@ -54,7 +57,7 @@ nav a:hover {
 .footer {
   @apply
     text-offWhite
-    bg-tertiary
+    bg-secondary
     h-[125px];
 }
 
@@ -68,7 +71,7 @@ nav a:hover {
   @apply 
     w-fit 
     flex flex-col 
-    sm:flex-row 
+    lg:flex-row 
     mx-auto;
 }
 
@@ -76,7 +79,9 @@ nav a:hover {
   @apply
     text-5xl
     text-center
-    font-bold;
+    font-bold
+    lg:mx-2
+    p-1.5;
 }
 
 .imageCrop {
@@ -93,6 +98,10 @@ nav a:hover {
   width: auto;
 }
 
+.aboutSection p {
+  @apply
+    text-center;
+}
 
 /* --------- Small Screen / Mobile ------------ */
 @media only screen and (max-width: 639px) {
