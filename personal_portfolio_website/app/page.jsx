@@ -24,12 +24,21 @@ export default function Home() {
         </div>
       </div>
       {/* Pics */}
+      {/* regular collage */}
       <Image
         src="/image-collage.png"
         width="0"
         height="0"
         sizes="100vw"
-        className="w-full h-auto"
+        className="w-full h-auto hideMdScreen"
+      />
+      {/* small collage */}
+      <Image
+        src="/image-collage-sm.png"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="w-full h-auto showMdScreen"
       />
       {/* Projects */}
       <div>

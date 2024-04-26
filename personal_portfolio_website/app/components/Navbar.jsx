@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
   return (
-    <div className="bg-primary p-8 sticky top-0 z-10">
+    <div className="overarchingNav">
       <nav>
         <p>Rebecca Heyman</p>
         <div className="sm:hidden navButton">
@@ -23,17 +23,19 @@ export default function Navbar() {
             )}
           </button>
         </div>
-        <div className="hidden sm:block">
+        {/* large screen */}
+        <div className="hideSmScreen">
           <Link href="/">Home</Link>
-          <Link target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
           <Link href="/blog">Blog</Link>
+          <Link target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
         </div>
-        <div className="sm:hidden">
+        {/* small screen */}
+        <div className="showSmScreen">
           {navbar ? (
             <div className="flex flex-col">
               <Link onClick={() => setNavbar(!navbar)} href="/" >Home</Link>
-              <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
               <Link onClick={() => setNavbar(!navbar)} href="/blog">Blog</Link>
+              <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
             </div>
           ) : (
             <div>
