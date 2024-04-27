@@ -1,0 +1,64 @@
+.higherOrLowerApp {
+  @apply 
+    bg-offWhite
+    pt-10
+    pb-5;
+}
+
+p.title {
+  @apply 
+  text-4xl
+  font-bold;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  @apply
+    p-2
+    bg-tertiary
+    rounded-lg
+    text-white
+    font-bold
+    cursor-pointer
+    m-1
+    p-2;
+}
+
+button:hover {
+  @apply 
+  bg-primary
+  text-white;
+}
+
+.higherOrLowerButtons {
+  margin: 20px 0;
+}
+
+.textInstructions {
+  @apply pt-2;
+  width: 50%;
+  margin: auto;
+}
+
+.githubLink:link {
+  @apply text-tertiary;
+}
+
+.githubLink:visited {
+  @apply text-tertiary;
+}
+
+.githubLink:hover {
+  @apply text-primary;
+}
+
+.githubLinkText {
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+  padding-right: 20px;
+}
