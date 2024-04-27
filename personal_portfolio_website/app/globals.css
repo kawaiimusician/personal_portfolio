@@ -11,6 +11,15 @@ body {
     text-center;
 }
 
+/* Background styles */
+.offWhite-Primary {
+  @apply bg-offWhite text-primary;
+}
+
+.tertiary-offWhite {
+  @apply bg-tertiary text-offWhite;
+}
+
 /* Screen Hiding/Showing */
 .hideSmScreen {
   @apply 
@@ -198,7 +207,9 @@ nav a:hover{
     rounded-full;
 }
 
-
+.aboutSection {
+  @apply p-12;
+}
 
 .aboutSection p {
   @apply
@@ -206,9 +217,17 @@ nav a:hover{
 }
 
 .projectSection {
-
+  @apply p-12;
 }
 
 .slick-slide > div {
   margin: 0 10px;
+}
+
+.collageImg {
+  @apply w-full h-auto;
+}
+
+.timelineSection {
+  @apply p-12;
 }

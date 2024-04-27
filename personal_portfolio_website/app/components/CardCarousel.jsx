@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image"
+import Link from "next/link";
 
 import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css';
@@ -43,21 +44,20 @@ export default function CardCarousel() {
       <div>
         <Slider {...settings}>
           {cardData.map((d) => (
-            <div className="bg-tertiary h-auto text-offWhite rounded-xl">
+            <div className="tertiary-offWhite h-auto rounded-xl">
               {/* img */}
               <div className="rounded-t-xl bg-tertiary flex justify-center items-center">
                 <Image src={d.projectImg} width={300} height={300} alt="Cartoon Rebecca" className="w-full h-auto rounded-t-xl" />
               </div>
               {/* text */}
               <div className="flex flex-col justify-center items-center p-4">
-                <p>{d.projectName}</p>
-                <p>{d.description}</p>
-                <button className="bg-white text-primary text-lg px-6 py-1">Read More</button>
+                <p className="text-2xl font-bold underline">{d.projectName}</p>
+                <p className="text-sm">{d.description}</p>
+                <Link href={`${d.linkRef}`} className="bg-white text-primary rounded-lg px-3 py-1 mt-3">{d.buttonText}</Link>
               </div>
             </div>
           ))}
         </Slider>
-
       </div>
     </div>
 
@@ -66,28 +66,24 @@ export default function CardCarousel() {
 
 const cardData = [
   {
-    projectName: "Example 1",
+    projectName: "Higher or Lower",
     projectImg: "/example-1.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    description: "Quick and fun game where you must guess if the hidden card is higher or lower than the card shown. Test your luck and give it a try!",
+    linkRef: "/blog",
+    buttonText: "View Project"
   },
   {
-    projectName: "Example 2",
+    projectName: "Color Guesser",
     projectImg: "/rebecca-heyman.png",
-    description: "This is an example of my project 1"
+    description: "How well do you know your RGB colors? Test your knowledge with this guessing game!",
+    linkRef: "/blog",
+    buttonText: "View Project"
   },
   {
-    projectName: "Example 3",
+    projectName: "Gary the Ghost",
     projectImg: "/rebecca-heyman.png",
-    description: "This is an example of my project 1"
-  },
-  {
-    projectName: "Example 4",
-    projectImg: "/rebecca-heyman.png",
-    description: "This is an example of my project 1"
-  },
-  {
-    projectName: "Example 5",
-    projectImg: "/rebecca-heyman.png",
-    description: "This is an example of my project 1"
+    description: "Gary the Ghost is a short one level platformer which served as my final project for Intro to Programming 1.",
+    linkRef: "/blog",
+    buttonText: "View Project"
   },
 ]

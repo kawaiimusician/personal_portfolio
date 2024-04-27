@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       {/* main header */}
-      <div className="py-10 bg-offWhite text-primary">
+      <div className="py-10 offWhite-Primary">
         <div className="mainPageHeader">
           <p>Developer</p>
           <p className="hideLgScreen">&#8212;</p>
@@ -14,21 +14,21 @@ export default function Home() {
           <p>Puzzle Solver</p>
         </div>
       </div>
-      <div className="bg-offWhite text-primary pb-10">
+      <div className="offWhite-Primary pb-10">
         <div className="mainImage mx-auto">
-          <Image src="/rebecca-heyman.png" width={300} height={300} alt="Cartoon Rebecca" className="" />
+          <Image src="/rebecca-heyman.png" width={300} height={300} alt="Cartoon Rebecca" />
         </div>
       </div>
       {/* About */}
-      <div className="bg-tertiary text-offWhite">
-        <div className="p-12 aboutSection">
+      <div className="tertiary-offWhite">
+        <div className="aboutSection">
           <p>Hello there!</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
             {/* Projects */}
-            <div className="bg-offWhite text-primary">
-        <div className="p-12 projectSection">
+            <div className="offWhite-Primary">
+        <div className="projectSection">
           <CardCarousel></CardCarousel>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function Home() {
         width="0"
         height="0"
         sizes="100vw"
-        className="w-full h-auto hideMdScreen"
+        className="collageImg hideMdScreen"
       />
       {/* small collage */}
       <Image
@@ -47,11 +47,11 @@ export default function Home() {
         width="0"
         height="0"
         sizes="100vw"
-        className="w-full h-auto showMdScreen"
+        className="collageImg showMdScreen"
       />
       {/* Experience Timeline */}
-      <div className="bg-tertiary text-offWhite">
-        <div className="p-12 timelineSection">
+      <div className="tertiary-offWhite">
+        <div className="timelineSection">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
