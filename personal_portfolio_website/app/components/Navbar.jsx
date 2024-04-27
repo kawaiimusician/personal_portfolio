@@ -9,16 +9,16 @@ export default function Navbar() {
     <div className="overarchingNav">
       <nav>
         <p>Rebecca Heyman</p>
-        <div className="sm:hidden navButton">
+        <div className="showSmScreen navButton">
           <button onClick={() => setNavbar(!navbar)} >
             {navbar ? (
-              <Image src="/close.png" width={40} height={40} alt="logo" />
+              <Image src="/close.png" width={40} height={40} alt="X" />
             ) : (
               <Image
                 src="/hamburger.png"
                 width={40}
                 height={40}
-                alt="logo"
+                alt="Menu Lines"
               />
             )}
           </button>
@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* small screen */}
         <div className="showSmScreen">
           {navbar ? (
-            <div className="flex flex-col">
+            <div className="flexCol linkList">
               <Link onClick={() => setNavbar(!navbar)} href="/" >Home</Link>
               <Link onClick={() => setNavbar(!navbar)} href="/blog">Blog</Link>
               <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>

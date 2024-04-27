@@ -1,6 +1,6 @@
-
+// Import CSS
 import "./globals.css";
-//import google font
+// Import google font
 import { Open_Sans } from "next/font/google";
 
 // component import

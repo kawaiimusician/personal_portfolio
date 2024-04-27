@@ -5,8 +5,8 @@
 /* base styles */
 body {
   @apply 
-    bg-offWhite
-    text-primary
+    bg-primary
+    text-offWhite
     text-lg
     text-center;
 }
@@ -42,6 +42,18 @@ body {
     lg:hidden;
 }
 
+.justifyCenter {
+  @apply 
+    flex 
+    justify-center;
+}
+
+.flexCol {
+  @apply
+    flex 
+    flex-col;
+}
+
 /* -------- Nav Bar ----------- */
 .overarchingNav {
   @apply 
@@ -49,7 +61,7 @@ body {
     px-8
     py-6
     sticky 
-    top-0 
+    top-0
     z-10;
 }
 
@@ -80,7 +92,7 @@ nav a {
     rounded-3xl
     transition duration-200;
 }
-nav a:hover {
+nav a:hover{
   @apply 
     text-primary
     bg-tertiary;
@@ -107,8 +119,7 @@ nav a:hover {
   
   nav a {
     @apply
-      flex-auto
-      text-center
+      w-1/2
       p-1.5
       rounded-3xl
       transition duration-200;
@@ -117,6 +128,12 @@ nav a:hover {
     @apply 
     text-primary
     bg-tertiary;
+  }
+
+  .linkList {
+    @apply 
+      w-auto 
+      items-center;
   }
   
   .spacer {
@@ -136,8 +153,12 @@ nav a:hover {
   @apply
     text-offWhite
     bg-secondary
-    h-[125px];
+    h-[125px]
+    flex flex-col 
+    justify-center 
+    bottom-0;
 }
+
 
 .footerLink {
   @apply
@@ -163,19 +184,21 @@ nav a:hover {
     p-1.5;
 }
 
-.imageCrop {
+.mainImage {
   width: 300px;
   height: 300px;
   position: relative;
   overflow: hidden;
-  border-radius: 50%;
-} 
-.circleImage {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
+
+  @apply mx-auto;
 }
+
+.mainImage img {
+  @apply 
+    rounded-full;
+}
+
+
 
 .aboutSection p {
   @apply
@@ -186,3 +209,6 @@ nav a:hover {
 
 }
 
+.slick-slide > div {
+  margin: 0 10px;
+}
