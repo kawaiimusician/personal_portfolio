@@ -44,14 +44,14 @@ export default function CardCarousel() {
       <div>
         <Slider {...settings}>
           {cardData.map((d) => (
-            <div className="tertiary-offWhite h-auto rounded-xl border-4 border-primary">
+            <div className="tertiary-offWhite carouselCard">
               {/* img */}
-              <div className="rounded-t-xl bg-tertiary flex justify-center items-center border-b-4 border-secondary">
+              <div className="carouselImage">
                 <Image src={d.projectImg} width={300} height={300} alt="Cartoon Rebecca" className="w-full h-auto rounded-t-lg" />
               </div>
               {/* text */}
-              <div className="flex flex-col justify-center items-center p-4">
-                <p className="text-2xl font-bold underline">{d.projectName}</p>
+              <div className="carouselTextContainer">
+                <p className="projectTitle">{d.projectName}</p>
                 <p className="text-sm">{d.description}</p>
                 <p className="text-sm">Project Date: {d.projDate}</p>
                 {d.updatedDate? (
@@ -59,7 +59,7 @@ export default function CardCarousel() {
                 ) : (
                   <div></div>
                 )}
-                <Link href={`${d.linkRef}`} className="bg-white text-tertiary rounded-lg px-3 py-1 mt-3">{d.buttonText}</Link>
+                <Link href={`${d.linkRef}`} className="projectButton">{d.buttonText}</Link>
               </div>
             </div>
           ))}

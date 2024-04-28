@@ -23,8 +23,9 @@ p.title {
 }
 
 .card-grid {
-  display: flex;
-  justify-content: center;
+  @apply
+    flex
+    justify-center;
 }
 
 button {
@@ -46,13 +47,15 @@ button:hover {
 }
 
 .higherOrLowerButtons {
-  margin: 20px 0;
+  @apply
+    my-2;
 }
 
 .textInstructions {
-  @apply pt-2;
-  width: 50%;
-  margin: auto;
+  @apply 
+  pt-2
+  w-1/2
+  m-auto;
 }
 
 .githubLink:link {
@@ -68,8 +71,16 @@ button:hover {
 }
 
 .githubLinkText {
-  display: flex;
-  justify-content: end;
-  font-size: 20px;
-  padding-right: 20px;
+  @apply
+    flex
+    justify-end
+    text-xl
+    pr-5;
+}
+
+.updateInfo {
+  @apply 
+    text-sm 
+    text-left 
+    pl-3;
 }

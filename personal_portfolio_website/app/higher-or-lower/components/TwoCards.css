@@ -1,6 +1,7 @@
 .cardOne {
-  margin-right: 20px;
-  position: relative;
+  @apply 
+    mr-5
+    relative;
 }
 
 .cardTwo {
@@ -8,23 +9,24 @@
 }
 
 .cardStyle {
-  width: 100%;
-  display: block;
-  border-radius: 30px;
-  border: 5px solid #331D2C;
+  @apply 
+    w-full
+    block
+    rounded-[30px]
+    border-4 border-primary;
 }
 
 /* Front of card - picture */
 .cardOne .front {
+  @apply absolute;
   transform: rotateY(90deg);
   transition: all ease-in 0.2s;
-  position: absolute;
 }
 
 .cardTwo .front {
+  @apply absolute;
   transform: rotateY(90deg);
   transition: all ease-in 0.2s;
-  position: absolute;
 }
 
 .flipped .front {

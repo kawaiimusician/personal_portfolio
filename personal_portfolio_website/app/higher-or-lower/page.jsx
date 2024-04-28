@@ -6,19 +6,19 @@ import TwoCards from './components/TwoCards';
 
 const cardValues = [
   // name on card : value of card
-  { 'src': '/img/A.png', 'name': 'Ace', 'value': 1 },
-  { 'src': '/img/2.png', 'name': '2', 'value': 2 },
-  { 'src': '/img/3.png', 'name': '3', 'value': 3 },
-  { 'src': '/img/4.png', 'name': '4', 'value': 4 },
-  { 'src': '/img/5.png', 'name': '5', 'value': 5 },
-  { 'src': '/img/6.png', 'name': '6', 'value': 6 },
-  { 'src': '/img/7.png', 'name': '7', 'value': 7 },
-  { 'src': '/img/8.png', 'name': '8', 'value': 8 },
-  { 'src': '/img/9.png', 'name': '9', 'value': 9 },
-  { 'src': '/img/10.png', 'name': '10', 'value': 10 },
-  { 'src': '/img/Jack.png', 'name': 'Jack', 'value': 11 },
-  { 'src': '/img/Queen.png', 'name': 'Queen', 'value': 12 },
-  { 'src': '/img/King.png', 'name': 'King', 'value': 13 },
+  { 'src': '/cardImgs/A.png', 'name': 'Ace', 'value': 1 },
+  { 'src': '/cardImgs/2.png', 'name': '2', 'value': 2 },
+  { 'src': '/cardImgs/3.png', 'name': '3', 'value': 3 },
+  { 'src': '/cardImgs/4.png', 'name': '4', 'value': 4 },
+  { 'src': '/cardImgs/5.png', 'name': '5', 'value': 5 },
+  { 'src': '/cardImgs/6.png', 'name': '6', 'value': 6 },
+  { 'src': '/cardImgs/7.png', 'name': '7', 'value': 7 },
+  { 'src': '/cardImgs/8.png', 'name': '8', 'value': 8 },
+  { 'src': '/cardImgs/9.png', 'name': '9', 'value': 9 },
+  { 'src': '/cardImgs/10.png', 'name': '10', 'value': 10 },
+  { 'src': '/cardImgs/Jack.png', 'name': 'Jack', 'value': 11 },
+  { 'src': '/cardImgs/Queen.png', 'name': 'Queen', 'value': 12 },
+  { 'src': '/cardImgs/King.png', 'name': 'King', 'value': 13 },
 ];
 
 export default function HigherorLower() {
@@ -146,7 +146,7 @@ export default function HigherorLower() {
       </div>
 
       <p className='githubLinkText'>See the original project on&nbsp;<a href='https://github.com/kawaiimusician/higher-or-lower' target='_blank' className='githubLink'>Github</a>!</p>
-      <p className='text-sm text-left pl-3'>Project updates (4/2024) are only cosmetic. All functionality remains the same as the original</p>
+      <p className='updateInfo'>Project updates (4/2024) are only cosmetic. All functionality remains the same as the original</p>
     </div>
   );
 }

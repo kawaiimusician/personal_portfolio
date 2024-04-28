@@ -194,12 +194,12 @@ nav {
 }
 
 .mainImage {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-
-  @apply mx-auto;
+  @apply 
+    h-[300px]
+    w-[300px]
+    relative
+    overflow-hidden
+    mx-auto;
 }
 
 .mainImage img {
@@ -207,6 +207,7 @@ nav {
     rounded-full;
 }
 
+/*  About  */
 .aboutSection {
   @apply p-12;
 }
@@ -216,14 +217,59 @@ nav {
     text-center;
 }
 
+/* Project Carousel */
 .projectSection {
   @apply p-12;
 }
 
 .slick-slide > div {
-  margin: 0 10px;
+  @apply mx-3;
 }
 
+.carouselCard {
+  @apply 
+    h-auto 
+    rounded-xl 
+    border-4 
+    border-primary;
+}
+
+.carouselImage {
+  @apply 
+    rounded-t-xl 
+    bg-tertiary 
+    flex justify-center 
+    items-center 
+    border-b-4 border-secondary;
+}
+
+.carouselTextContainer {
+  @apply 
+    flex flex-col 
+    justify-center items-center 
+    p-4;
+}
+
+.projectTitle {
+  @apply text-2xl font-bold underline;
+}
+
+.projectButton {
+  @apply 
+    bg-white 
+    text-tertiary 
+    rounded-lg 
+    px-3 py-1 
+    mt-3
+    transition duration-200;
+}
+.projectButton:hover {
+  @apply
+    bg-primary
+    text-offWhite;
+}
+
+/* Collages */
 .collageImg {
   @apply w-full h-auto;
 }
