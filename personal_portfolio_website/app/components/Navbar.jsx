@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="overarchingNav">
       <nav>
-        <p>Rebecca Heyman</p>
+        <Link href="/" className="navHeader">Rebecca Heyman</Link>
         <div className="showSmScreen navButton">
           <button onClick={() => setNavbar(!navbar)} >
             {navbar ? (
@@ -25,17 +25,17 @@ export default function Navbar() {
         </div>
         {/* large screen */}
         <div className="hideSmScreen">
-          <Link href="/">Home</Link>
-          <Link href="/blog">Blog</Link>
-          <Link target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
+          <Link href="/" className="linkStyling">Home</Link>
+          <Link href="/blog" className="linkStyling">Blog</Link>
+          <Link target="_blank" href="https://github.com/kawaiimusician" passHref={true} className="linkStyling">Github</Link>
         </div>
         {/* small screen */}
         <div className="showSmScreen">
           {navbar ? (
             <div className="flexCol linkList">
-              <Link onClick={() => setNavbar(!navbar)} href="/" >Home</Link>
-              <Link onClick={() => setNavbar(!navbar)} href="/blog">Blog</Link>
-              <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true}>Github</Link>
+              <Link onClick={() => setNavbar(!navbar)} href="/" className="linkStyling">Home</Link>
+              <Link onClick={() => setNavbar(!navbar)} href="/blog" className="linkStyling">Blog</Link>
+              <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true} className="linkStyling">Github</Link>
             </div>
           ) : (
             <div>

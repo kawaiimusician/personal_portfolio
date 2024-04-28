@@ -7,11 +7,11 @@ export default function TwoCards({ cards, flipped, firstCardFlipped }) {
 
       <div className='cardOne'>
         <div className={firstCardFlipped ? "" : "flipped"}>
-          <img src={cards[0].src} alt={cards[0].value} className="front" />
+          <img src={cards[0].src} alt={cards[0].value} className="front cardStyle" />
           <img
               src="/img/cover.png" 
               alt="card cover" 
-              className="back" 
+              className="back cardStyle" 
             />
         </div>
       </div>
@@ -21,12 +21,12 @@ export default function TwoCards({ cards, flipped, firstCardFlipped }) {
           <img 
             src={cards[1].src} 
             alt='card two' 
-            className="front" 
+            className="front cardStyle" 
           />
           <img
             src="/img/cover.png" 
             alt="card cover" 
-            className="back" 
+            className="back cardStyle" 
           />
         </div>
       </div>

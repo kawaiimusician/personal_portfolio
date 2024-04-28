@@ -6,7 +6,7 @@
 body {
   @apply 
     bg-primary
-    text-offWhite
+    text-white
     text-lg
     text-center;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 .tertiary-offWhite {
-  @apply bg-tertiary text-offWhite;
+  @apply bg-tertiary text-white;
 }
 
 /* Screen Hiding/Showing */
@@ -77,22 +77,22 @@ body {
 nav {
   @apply
   bg-primary
-  text-offWhite
+  text-white
     text-2xl
     flex
-    border-b-2 border-offWhite
+    border-b-2 border-white
     justify-between
     p-2.5;
 }
 
-nav p {
+.navHeader {
   @apply
     flex-auto
     text-4xl
     text-left;
 }
 
-nav a {
+.linkStyling {
   @apply
     flex-auto
     text-center
@@ -101,7 +101,7 @@ nav a {
     rounded-3xl
     transition duration-200;
 }
-nav a:hover{
+.linkStyling:hover{
   @apply 
     text-primary
     bg-tertiary;
@@ -126,14 +126,14 @@ nav a:hover{
       text-center;
   }
   
-  nav a {
+  .linkStyling {
     @apply
       w-1/2
       p-1.5
       rounded-3xl
       transition duration-200;
   }
-  nav a:hover {
+  .linkStyling:hover {
     @apply 
     text-primary
     bg-tertiary;

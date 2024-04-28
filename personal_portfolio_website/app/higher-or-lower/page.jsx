@@ -124,25 +124,27 @@ export default function HigherorLower() {
 
   return (
     <div className='offWhite-Primary higherOrLowerApp'>
-      <p className='title'>Higher or Lower?</p>
-      <p className='textInstructions'>Is the hidden card higher or lower than the current card? Aces count as lower than 2.</p>
+      <div className='appArea'>
+        <p className='title'>Higher or Lower?</p>
+        <p className='textInstructions'>Is the hidden card higher or lower than the current card? Aces count as lower than 2.</p>
 
-      <div className='higherOrLowerButtons'>
-        <button disabled={disabled} onClick={handleHigherButton}>Higher</button>
-        <button disabled={disabled} onClick={handleLowerButton}>Lower</button>
+        <div className='higherOrLowerButtons'>
+          <button disabled={disabled} onClick={handleHigherButton}>Higher</button>
+          <button disabled={disabled} onClick={handleLowerButton}>Lower</button>
+        </div>
+
+        <div>
+          {cards.length >= 1 && <TwoCards cards={cards} flipped={flipped} firstCardFlipped={firstCardFlipped} />}
+        </div>
+
+        {/* score */}
+        <div>
+          <p>Wins: {score.wins} </p>
+          <p>Losses: {score.losses}</p>
+        </div>
+        <button onClick={newGame}>New Game</button>
       </div>
 
-      <div>
-        {cards.length >= 1 && <TwoCards cards={cards} flipped={flipped} firstCardFlipped={firstCardFlipped} />}
-      </div>
-
-      {/* score */}
-      <div>
-        <p>Wins: {score.wins} </p>
-        <p>Losses: {score.losses}</p>
-      </div>
-
-      <button onClick={newGame}>New Game</button>
       <p className='githubLinkText'>See the original project on&nbsp;<a href='https://github.com/kawaiimusician/higher-or-lower' target='_blank' className='githubLink'>Github</a>!</p>
       <p className='text-sm text-left pl-3'>Project updates (4/2024) are only cosmetic. All functionality remains the same as the original</p>
     </div>

@@ -40,14 +40,14 @@ export default function CardCarousel() {
     ]
   };
   return (
-    <div className="w-3/4 m-auto">
+    <div className="w-10/12 m-auto">
       <div>
         <Slider {...settings}>
           {cardData.map((d) => (
-            <div className="tertiary-offWhite h-auto rounded-xl">
+            <div className="tertiary-offWhite h-auto rounded-xl border-4 border-primary">
               {/* img */}
-              <div className="rounded-t-xl bg-tertiary flex justify-center items-center">
-                <Image src={d.projectImg} width={300} height={300} alt="Cartoon Rebecca" className="w-full h-auto rounded-t-xl" />
+              <div className="rounded-t-xl bg-tertiary flex justify-center items-center border-b-4 border-secondary">
+                <Image src={d.projectImg} width={300} height={300} alt="Cartoon Rebecca" className="w-full h-auto rounded-t-lg" />
               </div>
               {/* text */}
               <div className="flex flex-col justify-center items-center p-4">
@@ -59,7 +59,7 @@ export default function CardCarousel() {
                 ) : (
                   <div></div>
                 )}
-                <Link href={`${d.linkRef}`} className="bg-white text-primary rounded-lg px-3 py-1 mt-3">{d.buttonText}</Link>
+                <Link href={`${d.linkRef}`} className="bg-white text-tertiary rounded-lg px-3 py-1 mt-3">{d.buttonText}</Link>
               </div>
             </div>
           ))}
@@ -73,7 +73,7 @@ export default function CardCarousel() {
 const cardData = [
   {
     projectName: "Higher or Lower",
-    projectImg: "/example-1.jpg",
+    projectImg: "/higher-or-lower.png",
     description: "Quick and fun game where you must guess if the hidden card is higher or lower than the card shown. Test your luck and give it a try!",
     projDate: "March 2022",
     updatedDate: "April 2024",
