@@ -123,10 +123,11 @@ export default function HigherorLower() {
   // console.log(answer)
 
   return (
-    <div className='offWhite-Primary higherOrLowerApp'>
-      <div className='appArea'>
+    <div className='offWhite-Primary pageSpacing'>
+      <div className='appArea bg-[#ebdae3]'>
         <p className='title'>Higher or Lower?</p>
-        <p className='textInstructions'>Is the hidden card higher or lower than the current card? Aces count as lower than 2.</p>
+        <p className='textInstructions'>Is the hidden card higher or lower than the current card?</p>
+        <p className='textInstructions'>Aces count as lower than 2.</p>
 
         <div className='higherOrLowerButtons'>
           <button disabled={disabled} onClick={handleHigherButton}>Higher</button>
@@ -146,7 +147,7 @@ export default function HigherorLower() {
       </div>
 
       <p className='githubLinkText'>See the original project on&nbsp;<a href='https://github.com/kawaiimusician/higher-or-lower' target='_blank' className='githubLink'>Github</a>!</p>
-      <p className='updateInfo'>Project updates (4/2024) are only cosmetic. All functionality remains the same as the original</p>
+      <p className='updateInfo'>Project updates (4/2024) are only cosmetic. All functionality remains the same as the original.</p>
     </div>
   );
 }

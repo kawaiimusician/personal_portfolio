@@ -1,19 +1,16 @@
-p.title {
+.colorGuesserApp {
   @apply 
-  text-4xl
-  font-bold;
+    bg-offWhite
+    pt-10
+    pb-5;
 }
 
-.card-grid {
-  @apply
-    flex
-    justify-center;
-}
-
-
-.higherOrLowerButtons {
-  @apply
-    my-2;
+.box {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 20px;
 }
 
 .githubLink:link {

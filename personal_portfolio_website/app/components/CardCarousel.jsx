@@ -86,7 +86,7 @@ const cardData = [
     description: "How well do you know your RGB colors? Test your knowledge with this guessing game!",
     projDate: "June 2022",
     updatedDate: "",
-    linkRef: "/blog",
+    linkRef: "/color-guesser",
     buttonText: "View Project"
   },
   {

@@ -11,6 +11,12 @@ body {
     text-center;
 }
 
+.pageSpacing {
+  @apply 
+    pt-10
+    pb-5;
+}
+
 /* Background styles */
 .offWhite-Primary {
   @apply bg-offWhite text-primary;
@@ -276,4 +282,46 @@ nav {
 
 .timelineSection {
   @apply p-12;
+}
+
+/* Project Apps */
+.appArea {
+  @apply
+  border-8 border-primary
+  rounded-3xl
+  w-fit
+  m-auto
+  mb-5
+  p-10;
+}
+
+p.title {
+  @apply 
+  text-4xl
+  font-bold
+  pb-3;
+}
+
+.textInstructions {
+  @apply 
+  w-3/4
+  m-auto;
+}
+
+button {
+  @apply
+    p-2
+    bg-tertiary
+    rounded-lg
+    text-white
+    font-bold
+    cursor-pointer
+    m-1
+    p-2;
+}
+
+button:hover {
+  @apply 
+  bg-primary
+  text-white;
 }
