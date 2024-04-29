@@ -280,11 +280,18 @@ nav {
   @apply w-full h-auto;
 }
 
-.timelineSection {
-  @apply p-12;
+.experienceSection {
+  @apply 
+  p-12
+  flex
+  justify-around
+  ;
 }
 
-/* Project Apps */
+
+
+
+/* --------Project Apps--------- */
 .appArea {
   @apply
   border-8 border-primary
