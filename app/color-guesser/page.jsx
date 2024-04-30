@@ -124,7 +124,7 @@ export default function App() {
         </div>
         {/* shows the score after 10 turns and shows a play "again button" */}
         <div className={`${showScore}`}>
-          <button onClick={playAgain}>New Game</button>
+          <button className='appButton' onClick={playAgain}>New Game</button>
         </div>
       </div>
       {/* link to github */}

@@ -1,0 +1,17 @@
+/* -------- footer --------- */
+.footer {
+    @apply 
+        text-offWhite 
+        bg-secondary 
+        h-[125px] 
+        flex flex-col 
+        justify-center 
+        bottom-0;
+}
+
+
+.footerLink {
+    @apply 
+        text-center 
+        p-1.5;
+}

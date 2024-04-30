@@ -130,8 +130,8 @@ export default function HigherorLower() {
         <p className='textInstructions'>Aces count as lower than 2.</p>
 
         <div className='higherOrLowerButtons'>
-          <button disabled={disabled} onClick={handleHigherButton}>Higher</button>
-          <button disabled={disabled} onClick={handleLowerButton}>Lower</button>
+          <button className='appButton' disabled={disabled} onClick={handleHigherButton}>Higher</button>
+          <button className='appButton' disabled={disabled} onClick={handleLowerButton}>Lower</button>
         </div>
 
         <div>
@@ -143,7 +143,7 @@ export default function HigherorLower() {
           <p>Wins: {score.wins} </p>
           <p>Losses: {score.losses}</p>
         </div>
-        <button onClick={newGame}>New Game</button>
+        <button className='appButton' onClick={newGame}>New Game</button>
       </div>
 
       <p className='githubLinkText'>See the original project on&nbsp;<a href='https://github.com/kawaiimusician/higher-or-lower' target='_blank' className='githubLink'>Github</a>!</p>

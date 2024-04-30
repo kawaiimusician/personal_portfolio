@@ -40,6 +40,7 @@ export default function Home() {
         height="0"
         sizes="100vw"
         className="collageImg hideMdScreen"
+        alt="Image Collage"
       />
       {/* small collage */}
       <Image
@@ -48,38 +49,39 @@ export default function Home() {
         height="0"
         sizes="100vw"
         className="collageImg showMdScreen"
+        alt="Image Collage"
       />
       {/* Experience Timeline */}
       <div className="tertiary-offWhite">
         <div className="experienceSection">
-          <div className="flex-none p-5 pr-20 border-r-4 border-offWhite">
-            <p className="underline text-2xl pb-2">Software Skills</p>
-            <div className="flex text-left justify-center">
-              <div className="flex flex-col pr-5">
-                <p>&#8212; JavaScript</p>
-                <p>&#8212; Python</p>
-                <p>&#8212; HTML & CSS</p>
-                <p>&#8212; Node</p>
-                <p>&#8212; Express</p>
-                <p>&#8212; Bootstrap</p>
+          <div className="skillsSection">
+            <p className="experienceTitle">Software Skills</p>
+            <div className="skillsListContainer">
+              <div className="whitespace-nowrap pr-5">
+                <p>&#8226; JavaScript</p>
+                <p>&#8226; Python</p>
+                <p>&#8226; HTML & CSS</p>
+                <p>&#8226; Node</p>
+                <p>&#8226; Express</p>
+                <p>&#8226; Bootstrap</p>
               </div>
-              <div className="flex flex-col">
-                <p>&#8212; React</p>
-                <p>&#8212; Next.js</p>
-                <p>&#8212; Tailwind CSS</p>
-                <p>&#8212; MongoDB</p>
-                <p>&#8212; PostgreSQL</p>
+              <div className="whitespace-nowrap">
+                <p>&#8226; React</p>
+                <p>&#8226; Next.js</p>
+                <p>&#8226; Tailwind CSS</p>
+                <p>&#8226; MongoDB</p>
+                <p>&#8226; PostgreSQL</p>
               </div>
             </div>
           </div>
 
-          <div className="flex-none p-5">
-            <p className="underline text-2xl pb-2">Education</p>
-            <p>University of London, Goldsmiths - BSc Computer Science (Estimated Graduation: April 2027)</p>
-            <p className="underline text-2xl pb-2 pt-3">Certifications</p>
-            <p>Software Developer Bootcamp - Austin Community College</p>
-            <p>Google IT Support Certificate - Google</p>
-            <p>NetSuite Certified SuiteFoundations - Oracle NetSuite</p>
+          <div className="eduArea">
+            <p className="experienceTitle">Education</p>
+            <p>&#8226; University of London, Goldsmiths - BSc Computer Science (Estimated Graduation: April 2027)</p>
+            <p className="experienceTitle pt-3">Certifications</p>
+            <p>&#8226; Software Developer Bootcamp - Austin Community College</p>
+            <p>&#8226; Google IT Support Certificate - Google</p>
+            <p>&#8226; NetSuite Certified SuiteFoundations - Oracle NetSuite</p>
           </div>
         </div>
 

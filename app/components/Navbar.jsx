@@ -2,9 +2,10 @@
 import Link from "next/link";
 import Image from "next/image"
 import { useState } from "react";
+import './Navbar.css';
 
 export default function Navbar() {
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false);
   return (
     <div className="overarchingNav">
       <nav>
