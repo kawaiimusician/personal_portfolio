@@ -103,7 +103,9 @@ body {
 
 /*  About  */
 .aboutSection {
-  @apply p-12;
+  @apply 
+    p-12
+    px-16;
 }
 
 .aboutSection p {

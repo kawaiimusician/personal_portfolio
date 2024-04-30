@@ -22,8 +22,8 @@ export default function Home() {
       {/* About */}
       <div className="tertiary-offWhite">
         <div className="aboutSection">
-          <p>Hello there!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="text-3xl pb-3">Hello there!</p>
+          <p>Allow me to introduce myself, my name is Rebecca and I'm a software developer with 3 years experience. In that time I have explored my passion for problem solving through both web and game development. Currently, I am working towards my bachelors degree in Computer Science at the University of London. Aside from programming, I love to play violin, crochet, cuddle my two cats, and play video games with my friends.</p>
         </div>
       </div>
       {/* Projects */}
@@ -71,6 +71,7 @@ export default function Home() {
                 <p>&#8226; Tailwind CSS</p>
                 <p>&#8226; MongoDB</p>
                 <p>&#8226; PostgreSQL</p>
+                <p>&#8226; Git & Github</p>
               </div>
             </div>
           </div>

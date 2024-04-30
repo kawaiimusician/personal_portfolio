@@ -93,7 +93,7 @@ const cardData = [
   },
   {
     projectName: "Coming Soon!",
-    projectImg: "/rebecca-heyman.png",
+    projectImg: "/ComingSoonProj.png",
     description: "Coming soon, stay tuned!",
     projDate: "TBD",
     updatedDate: "",
