@@ -23,7 +23,7 @@ export default function Home() {
       <div className="tertiary-offWhite">
         <div className="aboutSection">
           <p className="text-3xl pb-3">Hello there!</p>
-          <p>Allow me to introduce myself, my name is Rebecca and I'm a software developer with 3 years experience. In that time I have explored my passion for problem solving through both web and game development. Currently, I am working towards my bachelors degree in Computer Science at the University of London. Aside from programming, I love to play violin, crochet, cuddle my two cats, and play video games with my friends.</p>
+          <p>Allow me to introduce myself, my name is Rebecca and I&apos;m a software developer with 3 years experience. In that time I have explored my passion for problem solving through both web and game development. Currently, I am working towards my bachelors degree in Computer Science at the University of London. Aside from programming, I love to play violin, crochet, cuddle my two cats, and play video games with my friends.</p>
         </div>
       </div>
       {/* Projects */}
