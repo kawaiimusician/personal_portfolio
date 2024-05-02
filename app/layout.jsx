@@ -14,7 +14,14 @@ const open_sans = Open_Sans({
 
 export const metadata = {
   title: "Rebecca Heyman",
-  description: "a portfolio website",
+  description: "Rebecca Heyman is a software developer with 3 years experience. She is currently pursuing her degree in Computer Science at the University of London, Goldsmiths.",
+  keywords: ['Rebecca Heyman', "Rebecca Heyman Developer", 'Software Developer', "Austin", "Texas", "Web", "Development"],
+  creator: 'Rebecca Heyman',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 // the children prop relates to the page that is currently being displayed on the site
