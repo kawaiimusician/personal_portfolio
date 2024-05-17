@@ -6,11 +6,15 @@
 }
 
 .box {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  margin: 10px;
-  border-radius: 20px;
+  @apply
+    pt-10
+    h-36
+    w-36
+    sm:h-52
+    sm:w-52
+    border-2 border-black
+    rounded-3xl
+    m-2.5;
 }
 
 .githubLink:link {
@@ -28,7 +32,8 @@
 .githubLinkText {
   @apply
     flex
-    justify-end
+    justify-center
+    sm:justify-end
     text-xl
     pr-5;
 }
@@ -36,6 +41,7 @@
 .updateInfo {
   @apply 
     text-sm 
-    text-left 
+    sm:text-left 
+    text-center
     pl-3;
 }

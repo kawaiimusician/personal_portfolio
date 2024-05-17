@@ -31,7 +31,8 @@ p.title {
 .githubLinkText {
   @apply
     flex
-    justify-end
+    justify-center
+    sm:justify-end
     text-xl
     pr-5;
 }
@@ -39,6 +40,7 @@ p.title {
 .updateInfo {
   @apply 
     text-sm 
-    text-left 
+    sm:text-left 
+    text-center 
     pl-3;
 }

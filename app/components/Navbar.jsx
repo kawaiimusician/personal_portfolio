@@ -27,7 +27,6 @@ export default function Navbar() {
         {/* large screen */}
         <div className="hideSmScreen">
           <Link href="/" className="linkStyling">Home</Link>
-          <Link href="/blog" className="linkStyling">Blog</Link>
           <Link target="_blank" href="https://github.com/kawaiimusician" passHref={true} className="linkStyling">Github</Link>
         </div>
         {/* small screen */}
@@ -35,7 +34,6 @@ export default function Navbar() {
           {navbar ? (
             <div className="flexCol linkList">
               <Link onClick={() => setNavbar(!navbar)} href="/" className="linkStyling">Home</Link>
-              <Link onClick={() => setNavbar(!navbar)} href="/blog" className="linkStyling">Blog</Link>
               <Link onClick={() => setNavbar(!navbar)} target="_blank" href="https://github.com/kawaiimusician" passHref={true} className="linkStyling">Github</Link>
             </div>
           ) : (
