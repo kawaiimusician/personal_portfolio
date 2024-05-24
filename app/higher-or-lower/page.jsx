@@ -124,7 +124,7 @@ export default function HigherorLower() {
 
   return (
     <div className='offWhite-Primary pageSpacing'>
-      <div className='appArea bg-[#ebdae3]'>
+      <div className='appArea bg-[#ebdae3] w-fit'>
         <p className='title'>Higher or Lower?</p>
         <p className='textInstructions'>Is the hidden card higher or lower than the current card?</p>
         <p className='textInstructions'>Aces count as lower than 2.</p>

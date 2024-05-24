@@ -92,6 +92,15 @@ const cardData = [
     buttonText: "View Project"
   },
   {
+    projectName: "Pokemon Search App",
+    projectImg: "/ComingSoonProj.png",
+    description: "Simple API project using Pokeapi.co. Search up and learn about your favorite pokemon!",
+    projDate: "May 2024",
+    updatedDate: "",
+    linkRef: "/pokeapi",
+    buttonText: "View Project"
+  },
+  {
     projectName: "Coming Soon!",
     projectImg: "/ComingSoonProj.png",
     description: "Coming soon, stay tuned!",

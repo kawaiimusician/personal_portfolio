@@ -100,7 +100,7 @@ export default function App() {
 
   return (
     <div className="offWhite-Primary pageSpacing">
-      <div className='appArea bg-white'>
+      <div className='appArea bg-white w-fit'>
         <p className='title'>Guess the Color</p>
         <p className='textInstructions'>Click which color you think corresponds with the following RGB code:</p>
 

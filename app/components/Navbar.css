@@ -12,11 +12,11 @@ nav {
 }
 
 .linkStyling {
-    @apply flex-auto text-center px-2.5 py-2.5 rounded-3xl transition duration-200;
+    @apply flex-auto text-center mx-1 px-2.5 py-2.5 rounded-3xl transition duration-200;
 }
 
 .linkStyling:hover {
-    @apply text-primary bg-tertiary;
+    @apply bg-tertiary;
 }
 
 /* --------- Small Screen / Mobile Nav ------------ */
@@ -34,7 +34,7 @@ nav {
     }
 
     .linkStyling:hover {
-        @apply text-primary bg-tertiary;
+        @apply bg-tertiary;
     }
 
     .linkList {

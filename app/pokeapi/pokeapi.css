@@ -1,0 +1,34 @@
+.searchArea {
+  @apply
+    w-fit
+    m-auto
+    border-primary
+    border-2
+    rounded-lg
+    flex;
+}
+
+.searchBar {
+  @apply
+    px-2
+    rounded-lg;
+}
+
+input:focus {
+  outline: none;
+}
+
+.submitButton{
+  @apply
+    bg-primary
+    text-white
+    px-2
+    transition duration-200
+    justify-end;
+}
+.submitButton:hover{
+  @apply
+    bg-tertiary
+    text-white
+    px-2;
+}

@@ -209,7 +209,7 @@ body {
   @apply
   border-8 border-primary
   rounded-3xl
-  w-fit
+  /* w-fit */
   m-auto
   mb-5
   p-10;
