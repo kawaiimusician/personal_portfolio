@@ -34,6 +34,23 @@ input:focus {
     px-2;
 }
 
+.randomButton{
+  @apply
+  bg-primary
+  text-white
+  px-2
+  transition duration-200
+  rounded-lg
+  border-primary
+  border-2;
+}
+.randomButton:hover{
+  @apply
+  bg-tertiary
+  text-white
+    px-2;
+}
+
 .pokemonAvatar {
   @apply
     mx-auto

@@ -93,7 +93,7 @@ const cardData = [
   },
   {
     projectName: "Pokemon Search App",
-    projectImg: "/ComingSoonProj.png",
+    projectImg: "/pokemonSearch.png",
     description: "Simple API project using Pokeapi.co. Search up and learn about your favorite pokemon!",
     projDate: "May 2024",
     updatedDate: "",
