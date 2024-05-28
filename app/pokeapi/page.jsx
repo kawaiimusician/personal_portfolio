@@ -3,7 +3,10 @@ import './pokeapi.css';
 import React from 'react';
 import { useState } from 'react';
 import Axios from 'axios';
-import Image from 'next/image';
+
+export async function test() {
+
+}
 
 export default function Pokeapi() {
   const [pokemonName, setPokemonName] = useState("");
@@ -13,6 +16,7 @@ export default function Pokeapi() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const searchPokemon = (pokeName) => {
+    console.log("Pokemon name entered: " + pokeName)
     if (!pokeName) {
       setErrorMessage("Please enter the name of a pokemon in the search.");
     } else {
@@ -41,7 +45,6 @@ export default function Pokeapi() {
       })
     }
   }
-  // console.log(pokemon)
 
   const getPokemonSearchName = (name) => {
     name = name.replace(" ", "-");
@@ -59,8 +62,16 @@ export default function Pokeapi() {
   }
 
   const getRandomPokemon = () => {
+    setErrorMessage(""); 
     let randomId = Math.floor(Math.random() * (1025 - 1 + 1) + 1);
+
     searchPokemon(randomId);
+    document.getElementById("pokeSearchBar").value = "";
+    setPokemonName(randomId)
+  }
+
+  const handleClick = () => {
+    searchPokemon(pokemonName);
   }
 
   return (
@@ -73,15 +84,20 @@ export default function Pokeapi() {
         <div className='searchArea'>
           <input
             type="text"
-            className='searchBar'
-            onChange={(event) => { setPokemonName(getPokemonSearchName(event.target.value)); setErrorMessage(""); setPokemon({}); setDisplayPokemon(false) }}
+            className='searchBar' id="pokeSearchBar"
+            onChange={(event) => { 
+              setPokemonName(getPokemonSearchName(event.target.value)); 
+              setErrorMessage("");
+              setPokemon({});
+              setDisplayPokemon(false);
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter")
                 searchPokemon(pokemonName);
             }}
             placeholder='Enter Name...'
           />
-          <button onClick={searchPokemon} className='submitButton'>Search</button>
+          <button onClick={handleClick} className='submitButton'>Search</button>
         </div>
         <button onClick={getRandomPokemon} className='randomButton'>Random</button>
         {/* pokemon data */}
