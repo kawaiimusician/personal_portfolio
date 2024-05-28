@@ -209,7 +209,6 @@ body {
   @apply
   border-8 border-primary
   rounded-3xl
-  /* w-fit */
   m-auto
   mb-5
   p-10;
@@ -244,4 +243,9 @@ p.title {
   @apply 
   bg-primary
   text-white;
+}
+
+.errorMessage {
+  @apply
+    text-red-500;
 }

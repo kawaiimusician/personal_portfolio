@@ -1,7 +1,8 @@
 .searchArea {
   @apply
     w-fit
-    m-auto
+    mx-auto
+    my-2
     border-primary
     border-2
     rounded-lg
@@ -31,4 +32,13 @@ input:focus {
     bg-tertiary
     text-white
     px-2;
+}
+
+.pokemonAvatar {
+  @apply
+    mx-auto
+    mt-4
+    border-4
+    rounded-3xl
+    border-primary;
 }
