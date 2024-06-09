@@ -12,131 +12,38 @@ export default function Pokeapi() {
   // toggles display of pokemon data
   const [displayPokemon, setDisplayPokemon] = useState(false);
 
-  // assumes evolution
-  const [hasEvolution, setHasEvolution] = useState(true);
-
   // holds error message
   const [errorMessage, setErrorMessage] = useState("");
 
-  const getPokemon = (pokeName) => {
-    return new Promise((resolve, reject) => {
-      Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then((response) => {
-        return response;
-      }).then(data => {
-        resolve(data);
-      }).catch((error) => {
-        // handle error
-        console.log(error);
-        if (error.response.status == 404) {
-          setErrorMessage("Error: Please make sure you entered a valid pokemon name.");
-        }
-        reject(error);
-      })
-    })
-  }
-
-  const getSpecies = (speciesURL) => {
-    return new Promise((resolve, reject) => {
-      Axios.get(`${speciesURL}`).then((response) => {
-        return response;
-      }).then(data => {
-        resolve(data);
-      }).catch((error) => {
-        // handle error
-        console.log(error);
-        if (error.response.status == 404) {
-          setErrorMessage("");
-        }
-        reject(error);
-      })
-    })
-  }
-
-  const getEvolution = (evolutionChainURL) => {
-    return new Promise((resolve, reject) => {
-      Axios.get(`${evolutionChainURL}`).then((response) => {
-        return response;
-      }).then(data => {
-        resolve(data);
-      }).catch((error) => {
-        // handle error
-        console.log(error);
-        if (error.response.status == 404) {
-          setHasEvolution(false);
-        }
-        reject(error);
-      })
-    })
-  }
 
   const searchPokemon = (pokeName) => {
     console.log("Pokemon name entered: " + pokeName)
     if (!pokeName) {
       setErrorMessage("Please enter the name of a pokemon in the search.");
     } else {
+      // get pokemon information
+      Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then((response) => {
+        let res = response.data;
 
-      let pokemonData;
-      let pokemonSpeciesData;
-      let evolutionData;
-
-      getPokemon(pokeName).then(pokeData => {
-        pokemonData = pokeData.data;
-        console.log("Pokemon Data", pokemonData);
-        return getSpecies(pokemonData.species.url);
-
-      }).then(speciesData => {
-        pokemonSpeciesData = speciesData.data;
-        console.log("species data", speciesData);
-        console.log(pokemonSpeciesData.evolution_chain.url);
-        return getEvolution(pokemonSpeciesData.evolution_chain.url);
-
-      }).then(evoData => {
-        evolutionData = evoData.data;
-        console.log("evo data", evoData);
-
-      }).then(() => {
-        let height = Math.round((pokemonData.height * 0.3280839895) * 10) / 10;
-        let weight = Math.round((pokemonData.weight * 0.2204622622) * 10) / 10;
+        let height = Math.round((res.height * 0.3280839895) * 10) / 10;
+        let weight = Math.round((res.weight * 0.2204622622) * 10) / 10;
 
         setPokemon({
-          name: getPokemonDisplayName(pokemonData.name),
-          image: pokemonData.sprites.front_default,
-          hp: pokemonData.stats[0].base_stat,
+          name: getPokemonDisplayName(res.name),
+          image: res.sprites.front_default,
+          hp: res.stats[0].base_stat,
           height: height,
           weight: weight,
-          dexNum: pokemonData.id
+          dexNum: res.id
         });
         setDisplayPokemon(true);
-
-
-
-      }).catch(err => {
-        console.log(err);
-      });
-
-      // // get pokemon information
-      // Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then((response) => {
-      //   let res = response.data;
-
-      //   let height = Math.round((res.height * 0.3280839895) * 10) / 10;
-      //   let weight = Math.round((res.weight * 0.2204622622) * 10) / 10;
-
-      // setPokemon({
-      //   name: getPokemonDisplayName(res.name),
-      //   image: res.sprites.front_default,
-      //   hp: res.stats[0].base_stat,
-      //   height: height,
-      //   weight: weight,
-      //   dexNum: res.id
-      // });
-      // setDisplayPokemon(true);
-      // }).catch((error) => {
-      //   // handle error
-      //   console.log(error);
-      //   if (error.response.status == 404) {
-      //     setErrorMessage("Error: Please make sure you entered a valid pokemon name.");
-      //   }
-      // })
+      }).catch((error) => {
+        // handle error
+        console.log(error);
+        if (error.response.status == 404) {
+          setErrorMessage("Error: Please make sure you entered a valid pokemon name.");
+        }
+      })
     }
   }
 
@@ -159,7 +66,7 @@ export default function Pokeapi() {
 
   // generates number between 1 and 1024
   const getRandomPokemon = () => {
-    setErrorMessage("");
+    setErrorMessage(""); 
     let randomId = Math.floor(Math.random() * (1025 - 1 + 1) + 1);
 
     searchPokemon(randomId);
@@ -183,8 +90,8 @@ export default function Pokeapi() {
           <input
             type="text"
             className='searchBar' id="pokeSearchBar"
-            onChange={(event) => {
-              setPokemonName(getPokemonSearchName(event.target.value));
+            onChange={(event) => { 
+              setPokemonName(getPokemonSearchName(event.target.value)); 
               setErrorMessage("");
               setPokemon({});
               setDisplayPokemon(false);
