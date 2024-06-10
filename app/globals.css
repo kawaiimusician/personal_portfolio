@@ -235,8 +235,7 @@ p.title {
     text-white
     font-bold
     cursor-pointer
-    m-1
-    p-2;
+    m-1;
 }
 
 .appButton:hover {

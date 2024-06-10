@@ -105,6 +105,7 @@ export default function Pokeapi() {
           <button onClick={handleRandomClick} className='submitButton'>Search</button>
         </div>
         <button onClick={getRandomPokemon} className='randomButton'>Random</button>
+
         {/* pokemon data */}
         {errorMessage ? (
           <p className='errorMessage'>{errorMessage}</p>
