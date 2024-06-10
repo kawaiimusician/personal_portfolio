@@ -28,6 +28,7 @@ export default function HigherorLower() {
   const [firstCardFlipped, setFirstFlip] = useState(false)
   const [answer, setAnswer] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [isGameOver, setGameOver] = useState(false);
 
   // picks two cards out of the "deck"
   const pickCards = () => {
@@ -70,14 +71,17 @@ export default function HigherorLower() {
       newScore.wins++
       setScore(newScore);
     } else {
-      let newScore = { ...score }
-      newScore.losses++
-      setScore(newScore);
+      // let newScore = { ...score }
+      // newScore.losses++
+      // setScore(newScore);
+      console.log("Set Game Over")
+      gameOver();
+      return
     }
     setTimeout(() => {
       setFlipped(false);
     }, 2000)
-    setTimeout(()=> {
+    setTimeout(() => {
       setFirstFlip(true)
     }, 2500)
     setTimeout(() => {
@@ -93,14 +97,17 @@ export default function HigherorLower() {
       newScore.wins++
       setScore(newScore);
     } else {
-      let newScore = { ...score }
-      newScore.losses++
-      setScore(newScore);
+      // let newScore = { ...score }
+      // newScore.losses++
+      // setScore(newScore);
+      console.log("Set Game Over")
+      gameOver();
+      return
     }
     setTimeout(() => {
       setFlipped(false);
     }, 2000)
-    setTimeout(()=> {
+    setTimeout(() => {
       setFirstFlip(true)
     }, 2500)
     setTimeout(() => {
@@ -110,8 +117,19 @@ export default function HigherorLower() {
   }
 
   const newGame = () => {
-    pickCards();
+    setGameOver(false);
+    setFlipped(false);
+    setDisabled(false)
+    setTimeout(() => {
+      pickCards();
+    }, 300)
     setScore({ 'wins': 0, 'losses': 0 });
+  }
+
+  const gameOver = () => {
+    setDisabled(true);
+    console.log("Game Over!")
+    setGameOver(true);
   }
 
   // start game immediately
@@ -129,21 +147,23 @@ export default function HigherorLower() {
         <p className='textInstructions'>Is the hidden card higher or lower than the current card?</p>
         <p className='textInstructions'>Aces count as lower than 2.</p>
 
-        <div className='higherOrLowerButtons'>
-          <button className='appButton' disabled={disabled} onClick={handleHigherButton}>Higher</button>
-          <button className='appButton' disabled={disabled} onClick={handleLowerButton}>Lower</button>
-        </div>
+        {isGameOver ? (
+          <div className='higherOrLowerButtons'>
+            <button className='appButton' onClick={newGame}>New Game</button>
+          </div>
+        ) : (
+          <div className='higherOrLowerButtons'>
+            <button className='appButton' disabled={disabled} onClick={handleHigherButton}>Higher</button>
+            <button className='appButton' disabled={disabled} onClick={handleLowerButton}>Lower</button>
+          </div>
+        )}
 
         <div>
           {cards.length >= 1 && <TwoCards cards={cards} flipped={flipped} firstCardFlipped={firstCardFlipped} />}
         </div>
 
         {/* score */}
-        <div>
-          <p>Wins: {score.wins} </p>
-          <p>Losses: {score.losses}</p>
-        </div>
-        <button className='appButton' onClick={newGame}>New Game</button>
+        <p className='score'>Score: {score.wins} </p>
       </div>
 
       <p className='githubLinkText'>See the original project on&nbsp;<a href='https://github.com/kawaiimusician/higher-or-lower' target='_blank' className='githubLink'>Github</a>!</p>

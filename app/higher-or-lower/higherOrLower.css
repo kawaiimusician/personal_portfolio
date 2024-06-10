@@ -16,6 +16,13 @@ p.title {
     my-2;
 }
 
+.score {
+  @apply
+    mt-4
+    font-bold
+    text-2xl;
+}
+
 .githubLink:link {
   @apply text-tertiary;
 }
