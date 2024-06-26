@@ -8,14 +8,16 @@
 .box {
   @apply
     pt-10
-    h-36
-    w-36
+    h-32
+    w-32
     sm:h-52
     sm:w-52
     border-2 border-black
     rounded-3xl
-    m-2.5;
+    m-1
+    sm:m-2.5;
 }
+
 
 .githubLink:link {
   @apply text-tertiary;
